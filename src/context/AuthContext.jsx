@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
-
+import { BASE_URL } from '../config';
 const AuthContext = createContext(null);
 
 export const useAuth = () => {
@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem('token'));
 
   const login = async (email, password) => {
-    const response = await fetch('https://reqres.in/api/login', {
+    const response = await fetch(`${BASE_URL}/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),

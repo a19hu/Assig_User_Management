@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { ArrowLeft, Save } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import toast from 'react-hot-toast';
-
+import { BASE_URL } from '../config';
 export default function EditUser() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ export default function EditUser() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await fetch(`https://reqres.in/api/users/${id}`, {
+        const response = await fetch(`${BASE_URL}/users/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const { data } = await response.json();
@@ -43,7 +43,7 @@ export default function EditUser() {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`https://reqres.in/api/users/${id}`, {
+      const response = await fetch(`${BASE_URL}/users/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

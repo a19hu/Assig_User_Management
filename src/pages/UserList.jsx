@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { Edit2, Trash2, LogOut, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import toast from 'react-hot-toast';
+import { BASE_URL } from '../config';
+
 
 export default function UserList() {
   const [users, setUsers] = useState([]);
@@ -14,7 +16,7 @@ export default function UserList() {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch(`https://reqres.in/api/users?page=${page}`, {
+      const response = await fetch(`${BASE_URL}/users?page=${page}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await response.json();
@@ -33,7 +35,7 @@ export default function UserList() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`https://reqres.in/api/users/${id}`, {
+      const response = await fetch(`${BASE_URL}/users/${id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -51,7 +53,8 @@ export default function UserList() {
 
   const handleLogout = () => {
     logout();
-    navigate('/login');
+    navigate('/');
+    toast.success('Logout successful!');
   };
 
   if (isLoading) {

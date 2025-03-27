@@ -2,6 +2,9 @@
 
 A modern React application for user management, built with Javascript and Tailwind CSS. This application demonstrates authentication, user listing,After 2 Mins Automatice logout and CRUD operations using the ReqRes API.
 
+## App URL 
+ `https://usermanagement-ten-mu.vercel.app/`
+
 ## Features
 
 - 🔐 User Authentication & after 2 min session expire

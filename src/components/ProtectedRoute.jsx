@@ -10,7 +10,7 @@ export const ProtectedRoute= ({ children }) => {
         logout();
         toast.error('Session Expired');
       }
-    }, 180000);
+    }, 120000);
     return () => clearInterval(intervalId);
   }, [token, logout]);
 

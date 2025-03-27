@@ -5,8 +5,8 @@ import { useAuth } from '../context/AuthContext';
 import toast from 'react-hot-toast';
 
 export default function Login() {
-  const [email, setEmail] = useState('eve.holt@reqres.in');
-  const [password, setPassword] = useState('cityslicka');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const { login } = useAuth();
@@ -45,6 +45,7 @@ export default function Login() {
                 id="email"
                 name="email"
                 type="email"
+                placeholder='eve.holt@reqres.in'
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}

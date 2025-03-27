@@ -1,15 +1,15 @@
 # User Management Application
 
-A modern React application for user management, built with TypeScript and Tailwind CSS. This application demonstrates authentication, user listing, and CRUD operations using the ReqRes API.
+A modern React application for user management, built with Javascript and Tailwind CSS. This application demonstrates authentication, user listing,After 2 Mins Automatice logout and CRUD operations using the ReqRes API.
 
 ## Features
 
-- 🔐 User Authentication
+- 🔐 User Authentication & after 2 min session expire
 - 👥 User Management (List, Edit, Delete)
 - 📱 Responsive Design
 - 🎨 Modern UI with Tailwind CSS
-- ⚡ Fast Development with Vite
-- 🔍 Type Safety with TypeScript
+- ⚡ Fast Development
+- 🔍 Type Safety with Javascript
 - 🚦 Protected Routes
 - 🔔 Toast Notifications
 
@@ -22,8 +22,8 @@ A modern React application for user management, built with TypeScript and Tailwi
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd user-management-app
+git clone https://github.com/a19hu/Assig_User_Management.git
+cd Assig_User_Management
 ```
 
 2. Install dependencies:
@@ -33,10 +33,10 @@ npm install
 
 3. Start the development server:
 ```bash
-npm run dev
+npm start
 ```
 
-The application will be available at `http://localhost:5173`
+The application will be available at `http://localhost:3000`
 
 ## Build for Production
 
@@ -59,9 +59,7 @@ src/
 ├── components/        # Reusable components
 ├── context/          # React Context providers
 ├── pages/            # Page components
-├── types/            # TypeScript type definitions
-├── App.tsx           # Main application component
-└── main.tsx         # Application entry point
+└── App.tsx         # Main application component
 ```
 
 ## Authentication
@@ -108,7 +106,3 @@ This application integrates with the ReqRes API (https://reqres.in/) for:
    - Mobile-first approach
    - Responsive tables and forms
    - Consistent spacing and typography
-
-## License
-
-MIT

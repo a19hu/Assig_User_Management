@@ -14,6 +14,7 @@ export default function EditUser() {
     last_name: '',
     email: '',
   });
+  
 
   useEffect(() => {
     const fetchUser = async () => {

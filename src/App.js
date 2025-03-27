@@ -6,7 +6,10 @@ import { ProtectedRoute } from './components/ProtectedRoute';
 import Login from './pages/Login';
 import UserList from './pages/UserList';
 import EditUser from './pages/EditUser';
+
 function App() {
+
+  
   return (
     <BrowserRouter>
           <AuthProvider>
@@ -29,7 +32,6 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-              <Route path="/" element={<Navigate to="/users" replace />} />
             </Routes>
           </AuthProvider>
         </BrowserRouter>
